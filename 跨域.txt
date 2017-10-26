@@ -1,0 +1,26 @@
+1.同源策略
+  协议相同
+  域名相同
+  端口相同
+2.浏览器不同的域名不能访问对应的cookie，但是内部的表单没有限制
+3.同源策略限制的对象（跨域）
+  (1) cookie 、LocalStorage和IndexDB无法读取
+  (2) DOM 无法获得
+  (3) AJAX 请求不能发送
+4.如何设置同源策略(hosts)
+	设置 document.main='www.example.com';
+	document.cookie="aaa";
+	
+	text.xxx.com  a.html
+	text2.xxx.com b.html
+	
+5.突破同源策略
+  img iframe script(jsonp) link(background)
+
+6.使用div进行布局，不要用div进行无意义的包裹 span行内常见的元素
+
+7.尽量少写html 
+  html 第一减少dom渲染的时间，浪费整个文件大小
+  一个html元素当三个使用。:before :after
+8.高阶 WebSocket postMessage(iframe image)
+  代码写到image里面  http://www.qdfuns.com/notes/21482/92e6f250e00c245be9bbf9b90102d39d.html
